@@ -12,6 +12,14 @@ def API_View(request):
         serializer = TovarSerializer(tov, many=True)
         return Response(serializer.data)
 
+@api_view(['GET'])
+def API_View_D(request, id):
+    if request.method == 'GET':
+        t = Tovar.objects.get(id=id)
+        serializer = TovarSerializer(t)
+        return Response(serializer.data)
+
+
 
 
 # Create your views here.

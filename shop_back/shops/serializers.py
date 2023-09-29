@@ -4,4 +4,4 @@ from .models import *
 class TovarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tovar
-        fields = ('title', 'text', 'made', 'date', 'img', 'cat')
+        fields = ('title', 'text', 'made', 'date', 'img', 'cat', 'id')
