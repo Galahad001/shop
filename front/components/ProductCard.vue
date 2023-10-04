@@ -4,7 +4,7 @@
         <v-card-title>{{ product.title }}</v-card-title>
         <v-card-subtitle>{{ product.made }} руб.</v-card-subtitle>
        <v-card-actions>
-            <v-btn variant="flat" color="indigo">
+            <v-btn variant="flat" @click="basketStore.add(this.product)" color="indigo">
                 Купить
             </v-btn>
               
@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-// const basketStore = useBasketStore();
+const basketStore = useBasketStore();
 const URL_BACK = 'http://127.0.0.1:8000'
 const { product } = defineProps(['product'])
 </script>

@@ -19,7 +19,7 @@ def API_View_D(request, id):
         serializer = TovarSerializer(t)
         return Response(serializer.data)
 
-
+# class ProductList(generics.ListAPIView)
 
 
 # Create your views here.

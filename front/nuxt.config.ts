@@ -3,6 +3,7 @@ import vuetify from "vite-plugin-vuetify"
 
 export default defineNuxtConfig({
   modules:[
+    '@pinia/nuxt',
     async (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => config.plugins.push(vuetify()))
     }
@@ -10,6 +11,9 @@ export default defineNuxtConfig({
   build:{transpile:['vuetify']},
   vite: {ssr: {noExternal: ['vuetify']}},
   imports:{
-    dirs:['/stores']
+    dirs:['./stores'] 
+  },
+  pinia: {
+    autoImports: ['defineStore', 'mapeStores', 'acceptHMRUpdate'],
   }
 })

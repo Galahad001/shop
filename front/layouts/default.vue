@@ -9,6 +9,13 @@
                 <h3>iTEST</h3>
                 <v-btn  flat to="/">Домой</v-btn>
                 <v-btn  flat to="/about">О нас</v-btn>
+                
+                <v-btn to="/basket" class="text-none" stacked>
+                    <v-badge  :content="basketStore.productsTotal" color="error">
+                        <v-icon>mdi-cart-outline</v-icon>
+                    </v-badge>
+                </v-btn>
+
             </v-app-bar-title>
 
             </v-app-bar>
@@ -41,6 +48,7 @@
 </template>
 
 <script setup>
+const basketStore = useBasketStore()
 
 const links = [
     { name: 'Главная', href: '/' },
