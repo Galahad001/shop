@@ -9,6 +9,7 @@
                 <h3>iTEST</h3>
                 <v-btn  flat to="/">Домой</v-btn>
                 <v-btn  flat to="/about">О нас</v-btn>
+                <v-btn class="mr-4" variant="plain" to="/products">Каталог</v-btn>
                 
                 <v-btn to="/basket" class="text-none" stacked>
                     <v-badge  :content="basketStore.productsTotal" color="error">

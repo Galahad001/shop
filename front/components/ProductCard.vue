@@ -3,6 +3,7 @@
         <v-img :src="URL_BACK+product.img" height="180px"></v-img>
         <v-card-title>{{ product.title }}</v-card-title>
         <v-card-subtitle>{{ product.made }} руб.</v-card-subtitle>
+        <v-card-title>{{ product.cat.name }}</v-card-title>
        <v-card-actions>
             <v-btn variant="flat" @click="basketStore.add(this.product)" color="indigo">
                 Купить
